@@ -1,1 +1,16 @@
-index.html
+{{page.title}}<br>
+{% for child in page.children %}
+	{{child.title}}
+	<br>
+{% endfor %}
+<br>
+{{rendered}}
+{{output.2}} <br>
+{{output.2.content|safe}}
+<br>
+{% for child in output %}
+	{{child.content |safe}}
+	<br>
+	<br>
+	<div>---------</div>
+{% endfor %}

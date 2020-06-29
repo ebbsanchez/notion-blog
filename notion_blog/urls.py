@@ -7,5 +7,3 @@ urlpatterns = [
     # path('blog/', include('blog.urls', namespace="blog")),
     path('', include('blog.urls', namespace="blog")),
 ]
-
-	
