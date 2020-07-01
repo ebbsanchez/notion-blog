@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+
+    <title>{% block title %}3bbsanch3z{% endblock title %}</title>
+    {% load static %}
+
+    {% block head_meta %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock head_meta %}
+
+    {% block head_css %}
+        {# Materialize #}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {# GoogleFonts #}
+        
+        {# GlobalCSS #}
+        
+    {% endblock head_css %}
+
+    {% block head_js %}
+    	{# jquery #}
+        
+	    {# Materialize #}
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+    {% endblock head_js %}
+
+</head>
+<body class="black white-text">
+  {% block header %}
+  {% endblock header %}
+  
+  {# PC Nav #}
+  {% block nav %}
+     
+          
+  {% endblock nav %}
+      
+  {% block messages %}
+    {% if messages %}
+    <div class="container messages pink-text text-accent-1 black-text center">
+      <ul class="messages container">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+          <h5>{{ message }}</h5>
+          </li>
+          {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  {% endblock messages %}
+      
+  {% block content %}  
+  {% endblock content %}
+
+  {% block footer %}
+
+  <footer class="black center">
+    <div class="divider"></div>
+    <br>
+    <a class="white-text" href="https://www.instagram.com/3bbsanch3z">Instagram</a>
+    <p>Designed by Peachplease & Jack Sanchez</p>
+    <p>Developed by Jack Sanchez</p>
+  </footer>
+  {% endblock footer %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>

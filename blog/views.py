@@ -30,3 +30,4 @@ def index(request):
         'output': output,
     }
     return render(request, 'blog/index.html', context)
+
