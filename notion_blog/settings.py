@@ -13,7 +13,27 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 SECRET_KEY = os.getenv('NOTION_BLOG_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+env = "development"
+DEBUG_TRUE_FOR_TEST = None
+enable_coverage_report = True
+# All Setting here.
+if os.getenv("THIS_ENV") == "development":
+    # env = "uncomment_to_test_production"
+    # DEBUG_FALSE_FOR_TEST = "Uncomment_to_test_not_debugging"
+    pass
+else:
+    env = "production"
+    ADMINS = [('Jack','evo@gms.tku.edu.tw')]
+
+
+if env == "development":
+    DEBUG =  False if DEBUG_TRUE_FOR_TEST == 'Uncomment_to_test_not_debugging' else True
+    
+    print('We are now run in development. DEBUG = {}.'.format(DEBUG))
+else:
+    DEBUG = False
+    print('We are now run in productoin. DEBUG = {}.'.format(DEBUG))
 
 ALLOWED_HOSTS = ['*']
 
@@ -112,9 +132,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 
 # Path settings
 MEDIA_ROOT = PROJECT_PATH + '/media/'
-STATIC_ROOT = "staticfiles"
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'production_static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
