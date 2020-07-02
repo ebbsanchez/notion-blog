@@ -117,3 +117,4 @@ STATIC_URL = '/static/'
 
 # Path settings
 MEDIA_ROOT = PROJECT_PATH + '/media/'
+STATIC_ROOT = "staticfiles"
