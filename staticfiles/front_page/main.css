@@ -50,7 +50,7 @@ nav #logo{
 	color: #FCEF3C;
 	height:1em;
 	width:auto;
-	margin-top: calc((5-1.5)/2em);
+	margin-top: calc((5em - 1em) / 2);
 
 }
 
