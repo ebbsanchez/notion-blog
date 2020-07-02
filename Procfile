@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath . notion_blog.wsgi
+web: gunicorn notion_blog.wsgi
