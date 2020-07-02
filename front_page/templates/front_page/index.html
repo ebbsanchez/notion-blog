@@ -1,1 +1,47 @@
-{% include "base.html" %}
+{% extends "base.html" %}
+{% block head_css %}
+	{{block.super}}
+	{% load static %}
+	{# Fonts #}
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+	{# CSS #}
+	<link rel="stylesheet" href="{% static 'front_page/main.css' %}">
+{% endblock head_css %}
+{% block nav %}
+	{{block.super}}
+{% endblock nav %}
+{% block content %}
+	<div class="profile container center">
+		<div class='avatar_container'>
+			{# Vue Refactor: avatar #}
+			<img class="avatar circle" src="{% static 'front_page/media/avatar.JPG' %}" alt="">
+		</div>
+		<h1>
+			{# Vue Refactor: name #}
+			3bbsanch3z
+		</h1>
+		<h2>
+			{# Vue Refactor: title? #}
+			Filters Creator
+		</h2>
+		<section>
+			{# Vue Refactor: description #}
+			I'm creating some good stuff and share with the world??? I'm creating some good stuff and share with the world??? I'm creating some good stuff and share with the world??? I'm creating some good stuff and share with the world??? I'm creating some good stuff and share with the world??? 
+		</section>
+	</div>
+	<h1>Filters</h1>		
+	<div id="filters" class='filters row'>
+		<section class='filter col s6 m4 l3'
+			v-for="filter in filters_data"
+		>
+			<video muted='true' loop='true' autoplay><source :src="filter.demo"></video>
+			<a :href="filter.link">
+				<div class='filter-info'>
+					<img class='avatar' :src="filter.avatar" alt="">
+					<h3>[[filter.name]]</h3>
+				</div>
+			</a>
+		</section>
+	</div>
+	<script src="{% static 'front_page/script.js'%}"></script>
+{% endblock content %}

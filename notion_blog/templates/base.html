@@ -23,20 +23,34 @@
 
     {% block head_js %}
     	{# jquery #}
-        
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      {# Vue #}
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+      {# axios #}
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 	    {# Materialize #}
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         
     {% endblock head_js %}
 
 </head>
-<body class="black white-text">
+<body class="{% block bodyclass %}bodyclass{% endblock bodyclass %}">
   {% block header %}
   {% endblock header %}
   
   {# PC Nav #}
   {% block nav %}
-     
+ 	<nav class=''>
+		<div class="nav-wrapper">
+	      <a href="#" class="brand-logo left"><img id="logo" src="{% static 'front_page/media/3bbsanch3z.png'%}" alt=""></a>
+	      <ul id="nav-mobile" class="right hide-on-small-only">
+	        <li><a class='white-text' href="/filters">Filters</a></li>
+	        <li><a href="/blog">Blog</a></li>
+	        <li><a href="/resume">Resume</a></li>
+	      </ul>
+	    </div>
+	</nav>
           
   {% endblock nav %}
       
