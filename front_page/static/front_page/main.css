@@ -1,10 +1,10 @@
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Ubuntu', sans-serif;
-	margin:0;
+	margin:0 ;
 }
 h1 {
 	font-size: 1.5em;
-	margin: 1.5em;
+	margin: 1em;
 }
 h2 {
 	font-size: 1em;
@@ -16,14 +16,27 @@ h3 {
 a{
 	color: black;
 }
+p{
+	margin: 0;
+}
+footer{
+	margin-top: 2em;
+	position: relative;
+	padding: 2em 0;
+}
+
+#looking-for-job {
+	width: 100%;
+	padding: 1em;
+	background-color: #FFFC05;
+	text-align: center;
+}
+
 
 .bodyclass {
 	background-color: #F9F9F9;	
 }
-.big_square {
-	background-color: #F9F9F9;
-	height: 100em;
-}
+
 nav {
 	position: relative;
 	height: 5em;
@@ -40,6 +53,9 @@ nav #logo{
 	margin-top: calc((5-1.5)/2em);
 
 }
+
+
+
 
 .avatar {
 	width: 90px;
@@ -116,5 +132,7 @@ nav #logo{
 	bottom: 0;
 	width:100%;
 }
+
+
 
 

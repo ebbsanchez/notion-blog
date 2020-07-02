@@ -45,12 +45,16 @@
 		<div class="nav-wrapper">
 	      <a href="#" class="brand-logo left"><img id="logo" src="{% static 'front_page/media/3bbsanch3z.png'%}" alt=""></a>
 	      <ul id="nav-mobile" class="right hide-on-small-only">
-	        <li><a class='white-text' href="/filters">Filters</a></li>
-	        <li><a href="/blog">Blog</a></li>
-	        <li><a href="/resume">Resume</a></li>
+	        {# <li><a class='white-text' href="/filters">Filters</a></li> #}
+	        {# <li><a href="/blog">Blog</a></li> #}
+	        {# <li><a href="/resume">Resume</a></li> #}
 	      </ul>
 	    </div>
 	</nav>
+  <div id="looking-for-job">
+      <a href="https://instagram.com/3bbsanch3z">Want a custom filter? Inbox me on instagram!  </a>
+  </div>
+
           
   {% endblock nav %}
       
@@ -73,13 +77,14 @@
 
   {% block footer %}
 
-  <footer class="black center">
-    <div class="divider"></div>
-    <br>
-    <a class="white-text" href="https://www.instagram.com/3bbsanch3z">Instagram</a>
-    <p>Designed by Peachplease & Jack Sanchez</p>
-    <p>Developed by Jack Sanchez</p>
+  <footer class="black white-text center">
+    <a class="white-text" href="https://www.instagram.com/3bbsanch3z">
+      <p>
+      Copyright © Designed & Developed by @3bbsanch3z
+      </p>
+    </a>
   </footer>
+
   {% endblock footer %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
