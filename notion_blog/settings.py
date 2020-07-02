@@ -33,7 +33,7 @@ if env == "development":
     
     print('We are now run in development. DEBUG = {}.'.format(DEBUG))
 else:
-    DEBUG = False
+    DEBUG = True
     print('We are now run in productoin. DEBUG = {}.'.format(DEBUG))
 
 ALLOWED_HOSTS = ['*']
