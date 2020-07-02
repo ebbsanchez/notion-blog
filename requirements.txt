@@ -68,3 +68,4 @@ wcwidth==0.2.5
 webencodings==0.5.1
 psycopg2
 gunicorn
+django-heroku
