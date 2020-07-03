@@ -7,7 +7,7 @@ var app = new Vue({
 	},
 	mounted () {
     axios
-      .get('https://ebbfilters.herokuapp.com/filters/api/filters/')
+      .get('filters/api/filters/')
       .then(response => {
       	console.log(response);
       	let data = response.data

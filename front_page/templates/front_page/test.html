@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block head_css %}
+	{{block.super}}
+	{% load static %}
+	{# Fonts #}
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+	{# CSS #}
+	<link rel="stylesheet" type="text/css" href="{% static 'front_page/main.css' %}">
+{% endblock head_css %}
+{% block nav %}
+	{{block.super}}
+{% endblock nav %}
+{% block content %}
+	<div id="test">
+		hi
+		<div v-if="test">If</div>
+		<div v-else>else</div>
+		{# Testing Field #}
+		
+				<div v-if="filters_data[0].demo == null" >null :(
+					</div>
+				<div v-else>not null!!
+					</div>
+
+		{# Testing Field #}
+	</div>
+<script type="text/javascript" src="{% static 'front_page/test_vue.js'%}"></script>
+{% endblock content %}

@@ -5,4 +5,4 @@ from rest_framework import serializers
 class FiltersSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Filter
-        fields = ['name', 'demo', 'link', 'avatar']
+        fields = ['name', 'demo', 'link', 'avatar','demo_replace']

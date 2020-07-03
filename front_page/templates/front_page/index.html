@@ -39,7 +39,10 @@
 		<section class='filter col s6 m4 l3'
 			v-for="filter in filters_data"
 		>
-			<video muted='true' loop='true' autoplay><source :src="filter.demo"></video>
+			<video muted='true' loop='true' autoplay>
+				<source class="demo" v-if='filter.demo_replace == null' :src="filter.demo">
+				<source v-else class="replace_demo" :src="filter.demo_replace">
+			</video>
 			<a :href="filter.link">
 				<div class='filter-info'>
 					<img class='avatar' :src="filter.avatar" alt="">

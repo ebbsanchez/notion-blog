@@ -4,7 +4,7 @@ from filters_api.models import Filter
 
 
 def index(request):
-	filters = Filter.objects.all()
-    # need refactor for api
-	context = {}
-	return render(request, 'front_page/index.html', context)
+	return render(request, 'front_page/index.html')
+
+def test(request):
+	return render(request, 'front_page/test.html')

@@ -11,7 +11,7 @@ class Filter(TimeStampedModel):
     demo = models.CharField(max_length=400)
     link = models.CharField(max_length=100)
     avatar = models.CharField(max_length=400)
-    # slug = models.SlugField(unique=True)
-
+    demo_replace = models.FileField(
+        upload_to='demo_replace/', null=True)
     def __str__(self):
     	return self.name
