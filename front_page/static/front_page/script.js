@@ -9,9 +9,9 @@ var app = new Vue({
     axios
       .get('filters/api/filters/')
       .then(response => {
-      	console.log(response);
       	let data = response.data
       	for (var i = data.length - 1; i >= 0; i--) {
+          data[i].demo = "/media/" + data[i].name + ".mp4"
       		this.filters_data.push(data[i]);
       	}
       	

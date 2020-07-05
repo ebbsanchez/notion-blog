@@ -63,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'notion_blog.urls'
@@ -78,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -136,9 +138,6 @@ USE_TZ = True
 # STATIC_URL = '/static/'
 
 
-# Path settings
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
@@ -151,7 +150,8 @@ STATICFILES_DIRS = (
 
 # CORS_ORIGIN_ALLOW_ALL = True
 MEDIA_URL = '/media/'
-MEDIA_ROOT= os.path.join(os.path.dirname(BASE_DIR), "media")
-
+MEDIA_ROOT= os.path.join(BASE_DIR, "media")
+print('MEDIA_ROOT = {}'.format(MEDIA_ROOT))
+print('BASE_DIR = {}'.format(BASE_DIR))
 
 django_heroku.settings(locals())
